@@ -14,7 +14,19 @@ public:  // anybody who uses this class can plays with these numbers
 	//displays time in HH:mm style
 	void printTime();
 };
+ /* These functions exclusively belong to instances of the clock. You need all 3 pieces of info (clock, functionType (void), functionName (tick)*/
 
+int main() {
+	Clock earth; 
+	earth.minute = 9 * 60 + 23;
+	earth.minutesPerDay = 1440;
+	earth.printTime();
+	cout << endl;
+	earth.tick();
+	earth.printTime();
+	cout << endl;
+
+}
 void Clock::tick() { // inside the scope of clock. this function belongs to CLOCK
 	minute++;
 	minute %= minutesPerDay;
