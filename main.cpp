@@ -18,7 +18,7 @@ public:  // anybody who uses this class can plays with these numbers
 
 int main() {
 	Clock earth; 
-	earth.minute = 9 * 60 + 23;
+	earth.minute = 9 * 60 + 23; // 9:23AM
 	earth.minutesPerDay = 1440;
 	earth.printTime();
 	cout << endl;
