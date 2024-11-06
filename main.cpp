@@ -43,12 +43,12 @@ public:
 
 int main() {
 	Clock earth; 
-	Clock mars(24.62 * 60);
+	Clock mars(24.62 * 60, 907); //907 makes mars start at that minute number of 907
 
 
-	earth.setMinute(9 * 60 + 23);
+	earth.setMinute(9 * 60 + 40);
 	earth.setMinutesPerDay(1440);
-//earth.minute = 9 * 60 + 23; // 9:23AM
+//earth.minute = 9 * 60 + 23; // 9:40AM
 //earth.minutesPerDay = 1440; // cant print these anymore bc minutes and minutesperday are private.
 	earth.printTime();
 	cout << " raw minutes: " << earth.getMinute() << endl;
@@ -61,7 +61,8 @@ int main() {
 	mars.setMinute(1450);
 	mars.printTime(); cout << endl;
 	mars.tick();
-
+	mars.printTime(); cout << endl;
+	mars.tick();
 	return 0;
 }
 // CONSTRUCTORS DEF
