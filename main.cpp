@@ -13,6 +13,16 @@ private:  // anybody who uses this class can plays with these numbers
 	int minutesPerDay; // e.g 1440 on Earth
 
 public:
+	//constructors
+	/*minutes per will be 1440, minute will be 0*/
+	Clock(); // no params, default constructor
+	
+	// minutes per day will be mpd, minute will be 0
+	Clock(int mpd);
+
+	//minutes per day, and minutes both = 0
+	Clock(int mpd, int m);
+
 	// returns the raw minutes
 	int getMinute();
 
