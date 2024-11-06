@@ -43,6 +43,9 @@ public:
 
 int main() {
 	Clock earth; 
+	Clock mars(24.62 * 60);
+
+
 	earth.setMinute(9 * 60 + 23);
 	earth.setMinutesPerDay(1440);
 //earth.minute = 9 * 60 + 23; // 9:23AM
@@ -54,22 +57,31 @@ int main() {
 	earth.printTime();
 	cout << endl;
 
+	mars.printTime(); cout << endl;
+	mars.setMinute(1450);
+	mars.printTime(); cout << endl;
+	mars.tick();
+
+	return 0;
 }
 // CONSTRUCTORS DEF
 
 Clock::Clock() //within the Clock function 
 {
-
+	minutesPerDay = 1440;
+	minute = 0;
 }
 
 Clock::Clock(int mpd)
 {
-
+	minutesPerDay = mpd;
+	minute = 0;
 }
 
 Clock::Clock(int mpd, int m)
 {
-
+	minutesPerDay = mpd;
+	minute = m;
 }
 int Clock::getMinute() {
 	return minute;
