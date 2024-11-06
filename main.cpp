@@ -55,6 +55,22 @@ int main() {
 	cout << endl;
 
 }
+// CONSTRUCTORS DEF
+
+Clock::Clock() //within the Clock function 
+{
+
+}
+
+Clock::Clock(int mpd)
+{
+
+}
+
+Clock::Clock(int mpd, int m)
+{
+
+}
 int Clock::getMinute() {
 	return minute;
 }
